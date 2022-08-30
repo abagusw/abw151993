@@ -13,6 +13,7 @@ export default {
   }),
   methods: {
     submit: async function () {
+      const axios = require('axios');
       const self = this;
       axios({
         method: "post",
@@ -57,9 +58,9 @@ export default {
             ></v-text-field>
           </v-col>
         </v-row>
-        <v-row>
+        <v-row class="mb-2">
           <v-col>
-            <v-btn @click="submit" color="success"> Continue </v-btn>
+            <v-btn @click="submit" color="success" class="d-flex justify-right"> Continue </v-btn>
           </v-col>
         </v-row>
       </v-form>
